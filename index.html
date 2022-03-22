@@ -11,21 +11,23 @@
     <h1>Jogo da Velha</h1>
     <div id="container">
         <div id="linha1">
-            <div id="1" class="qd" onclick="preenche(this)"></div>
-            <div id="2" class="qd" onclick="preenche(this)"></div>
-            <div id="3" class="qd" onclick="preenche(this)"></div>
+            <div id="0" class="qd"></div>
+            <div id="1" class="qd"></div>
+            <div id="2" class="qd"></div>
         </div>
         <div id="linha2">
-            <div id="4" class="qd" onclick="preenche(this)"></div>
-            <div id="5" class="qd" onclick="preenche(this)"></div>
-            <div id="6" class="qd" onclick="preenche(this)"></div>
+            <div id="3" class="qd"></div>
+            <div id="4" class="qd"></div>
+            <div id="5" class="qd"></div>
         </div>
         <div id="linha3">
-            <div id="7" class="qd" onclick="preenche(this)"></div>
-            <div id="8" class="qd" onclick="preenche(this)"></div>
-            <div id="9" class="qd" onclick="preenche(this)"></div>
+            <div id="6" class="qd"></div>
+            <div id="7" class="qd"></div>
+            <div id="8" class="qd"></div>
         </div>
     </div>
-    <script src="script/script.js"></script>    
+    <button id="botao" onclick="reiniciarJogo()">Reiniciar o Jogo</button>
+    <script src="script/game.js"></script> 
+    <script src="script/interface.js"></script>   
 </body>
 </html>

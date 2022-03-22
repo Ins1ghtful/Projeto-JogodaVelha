@@ -1,17 +1,88 @@
 body{
    text-align: center; 
+   margin-left:0;
+   margin-right:0;
+   background-color: black;
 }
 h1{
     font-family: Arial, Helvetica, sans-serif;
-}
-#container{
-
+    color: white;
 }
 .qd{
     display: inline-block;
-    width: 100px;
+    width: 100px;   
     height: 100px;
     margin: 1px;
-    background-color: beige;
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
+}
+
+.o{
+    position: relative;
+}
+.o:after{
+    position: absolute;
+    content: '\1F6E1';
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.x{
+    position: relative;
+}
+.x:after{
+    position: absolute;
+    content: '\2694';
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#botao{
+    margin: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-weight: bolder;
+    font-weight: bold;
+}
+#botao:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition-duration: 300ms;
+}
+
+
+@keyframes mostraMensagem{
+    0%{padding-top:0px;padding-bottom:0px;background-color:rgb(105, 0, 0)}
+    35%{padding-top:6px;padding-bottom:6px;background-color:rgb(133, 0, 0);}
+    50%{opacity:1;padding-top:6px;padding-bottom:6px;background-color:rgb(146, 0, 0);}
+    75%{opacity:0.6;padding-top:1px;padding-bottom:1px;background-color: rgb(160, 0, 0);}
+    100%{opacity:0;padding-top:1px;padding-bottom:1px;background-color:rgb(160, 0, 0);}
+}
+
+.boxMessage{
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    width: 100vw;
+    animation-name: mostraMensagem;
+    animation-duration: 3s;
+    animation-delay: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    background-color: rgb(20, 16, 255);
+    color: white;
+
 }
