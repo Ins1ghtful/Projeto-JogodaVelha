@@ -23,6 +23,10 @@ function executarJogada(posicao){
         //Verificando se houve empate
         if(!gameOver&&counter==9){
             document.body.innerHTML += `<div class='boxMessage'>O JOGO EMPATOU</div>`;
+            setTimeout(()=>{
+                let elemento = document.querySelector(".boxMessage");
+                elemento.parentNode.removeChild(elemento);
+            },3700);
         }
 
         //Passando a vez para o outro jogador
@@ -31,7 +35,11 @@ function executarJogada(posicao){
     //Caso o Usuário selecione uma casa que já foi selecionada
     }else{
         document.body.innerHTML += `<div class='boxMessage'>ESCOLHA OUTRA POSIÇÃO</div>`;
-        
+        setTimeout(()=>{
+            let elemento = document.querySelector(".boxMessage");
+            elemento.parentNode.removeChild(elemento);
+        },3700);
+
         let qds = document.querySelectorAll(".qd");
 
         qds.forEach((qd)=>{
@@ -68,6 +76,11 @@ function zeraVariaveis(){
         casas[i] = '';
     }
     document.body.innerHTML += `<div class='boxMessage'>O JOGO FOI REINICIADO</div>`;
+    setTimeout(()=>{
+        let elemento = document.querySelector(".boxMessage");
+        elemento.parentNode.removeChild(elemento);
+    },3700);
+
     let qds = document.querySelectorAll(".qd");
 
     qds.forEach((qd)=>{

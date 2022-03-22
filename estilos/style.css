@@ -78,11 +78,8 @@ h1{
     width: 100vw;
     animation-name: mostraMensagem;
     animation-duration: 3s;
-    animation-delay: 1;
     animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    background-color: rgb(20, 16, 255);
+    animation-fill-mode: forwards;
     color: white;
-
 }
+
